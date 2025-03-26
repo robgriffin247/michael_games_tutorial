@@ -8,6 +8,8 @@ var direction: Vector2 = Vector2.ZERO
 @onready var sprite: Sprite2D = $Sprite2D
 @onready var state_machine: PlayerStateMachine = $StateMachine
 
+signal direction_changed( new_direction: Vector2 )
+
 
 func _ready() -> void:
 	state_machine.initialize(self)
@@ -16,8 +18,6 @@ func _ready() -> void:
 func _process(_delta: float) -> void:
 	
 	# Calculate direction
-	#direction.x = Input.get_action_strength("right") - Input.get_action_strength("left")
-	#direction.y = Input.get_action_strength("down") - Input.get_action_strength("up")
 	direction = Vector2(
 		Input.get_axis("left", "right"),
 		Input.get_axis("up", "down")
@@ -41,6 +41,8 @@ func set_direction() -> bool:
 	
 	if new_direction == cardinal_direction: # did direction not change?
 		return false
+	
+	direction_changed.emit(new_direction)
 	
 	cardinal_direction = new_direction
 	

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cvotxxv6w4cby"
-path="res://.godot/imported/AttackSprite01.png-5fbf626e162a1f60d09f0914ed0af680.ctex"
+uid="uid://cw5ocbreuvnde"
+path="res://.godot/imported/Grass-01.png-757ab78e46dd8b09c3427f89873e22d2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://_downloaded_assets/AttackSprite01.png"
-dest_files=["res://.godot/imported/AttackSprite01.png-5fbf626e162a1f60d09f0914ed0af680.ctex"]
+source_file="res://_DownloadedAssets/Grass-01.png"
+dest_files=["res://.godot/imported/Grass-01.png-757ab78e46dd8b09c3427f89873e22d2.ctex"]
 
 [params]
 
