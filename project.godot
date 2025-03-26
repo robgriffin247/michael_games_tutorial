@@ -11,13 +11,14 @@ config_version=5
 [application]
 
 config/name="michael_games_tutorial"
-run/main_scene="res://GeneralNodes/Playground.tscn"
+run/main_scene="res://GeneralNodes/playground.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
 config/icon="res://icon.svg"
 
 [autoload]
 
-LevelManager="*res://00_Globals/Scripts/GlobalLevelManager.gd"
+LevelManager="*res://00_Globals/Scripts/global_level_manager.gd"
+PlayerManager="*res://00_Globals/Scripts/global_player_manager.gd"
 
 [display]
 
