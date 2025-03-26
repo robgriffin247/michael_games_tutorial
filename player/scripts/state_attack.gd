@@ -12,7 +12,7 @@ var attacking: bool = false
 @onready var attack_effect_animation_player: AnimationPlayer = $"../../Sprite2D/AttackEffectSprite/AttackEffectAnimationPlayer"
 
 @onready var audio: AudioStreamPlayer2D = $"../../Sounds/AudioStreamPlayer2D"
-@onready var hurt_box: HurtBox = $"../../Interactions/HurtBox"
+@onready var attack_hurt_box: HurtBox = %AttackHurtBox
 
 
 
@@ -29,13 +29,13 @@ func enter() -> void:
 	attacking = true
 	
 	await get_tree().create_timer(0.15).timeout
-	hurt_box.monitoring = true
+	attack_hurt_box.monitoring = true
 	
 
 
 func exit() -> void:
 	animation_player.animation_finished.disconnect( end_attack )
-	hurt_box.monitoring = false
+	attack_hurt_box.monitoring = false
 	attacking = false
 	
 	
@@ -62,6 +62,6 @@ func handle_input( _event: InputEvent ) -> State:
 
 
 func end_attack( _new_animation_name: String ) -> void:
-	hurt_box.monitoring = false
+	attack_hurt_box.monitoring = false
 	attacking = false
 	
