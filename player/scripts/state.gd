@@ -16,14 +16,14 @@ func exit() -> void:
 
 
 # What ahappens with frames/ticks in this state
-func process( delta ) -> State:
+func process( _delta ) -> State:
 	return null
 
 
-func physics( delta ) -> State:
+func physics( _delta ) -> State:
 	return null
 
 
 # What happens with inputs in this state
-func handle_input( delta ) -> State:
+func handle_input( _delta ) -> State:
 	return null

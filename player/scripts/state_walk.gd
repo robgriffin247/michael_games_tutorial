@@ -2,6 +2,7 @@ class_name StateWalk extends State
 
 @export var walk_speed: float = 110.0
 @onready var idle: State = $"../Idle"
+@onready var attack: State = $"../Attack"
 
 
 # What happens when player enters/exits this state
@@ -13,8 +14,8 @@ func exit() -> void:
 	pass
 
 
-# What ahappens with frames/ticks in this state
-func process( delta ) -> State:
+# What happens with frames/ticks in this state
+func process( _delta ) -> State:
 	if player.direction == Vector2.ZERO:
 		return idle
 	
@@ -26,11 +27,12 @@ func process( delta ) -> State:
 	return null
 
 
-
-func physics( delta ) -> State:
+func physics( _delta ) -> State:
 	return null
 
 
 # What happens with inputs in this state
-func handle_input( delta ) -> State:
+func handle_input( _event: InputEvent ) -> State:
+	if _event.is_action_pressed("attack"):
+		return attack
 	return null

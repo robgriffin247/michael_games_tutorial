@@ -13,7 +13,7 @@ func _ready() -> void:
 	state_machine.initialize(self)
 
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	
 	# Calculate direction
 	#direction.x = Input.get_action_strength("right") - Input.get_action_strength("left")
@@ -24,7 +24,7 @@ func _process(delta: float) -> void:
 	).normalized() 
 
 
-func _physics_process(delta: float) -> void:
+func _physics_process(_delta: float) -> void:
 	
 	move_and_slide()
 
