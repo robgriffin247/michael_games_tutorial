@@ -1,16 +1,17 @@
-[gd_scene load_steps=31 format=3 uid="uid://b61fsyov1dmnu"]
+[gd_scene load_steps=32 format=3 uid="uid://b61fsyov1dmnu"]
 
-[ext_resource type="Script" path="res://Player/Scripts/player.gd" id="1_c34kv"]
+[ext_resource type="Script" path="res://Player/Scripts/Player.gd" id="1_c34kv"]
 [ext_resource type="Texture2D" uid="uid://bemcgj3aba7c0" path="res://Player/Sprites/PlayerSprite02.png" id="2_ri25b"]
-[ext_resource type="Script" path="res://Player/Scripts/player_state_machine.gd" id="3_2opom"]
+[ext_resource type="Script" path="res://Player/Scripts/PlayerStateMachine.gd" id="3_2opom"]
 [ext_resource type="Texture2D" uid="uid://c4aht1un3ojhj" path="res://Player/Sprites/AttackSprite01.png" id="3_63if4"]
-[ext_resource type="Script" path="res://Player/Scripts/state_idle.gd" id="4_7ab88"]
+[ext_resource type="Script" path="res://Player/Scripts/StateIdle.gd" id="4_7ab88"]
 [ext_resource type="Texture2D" uid="uid://cq4kxcrqv3ewq" path="res://_DownloadedAssets/Shadow.png" id="4_t5sp2"]
-[ext_resource type="Script" path="res://Player/Scripts/state_walk.gd" id="5_i1400"]
-[ext_resource type="Script" path="res://Player/Scripts/state_attack.gd" id="6_stogy"]
+[ext_resource type="Script" path="res://Player/Scripts/StateWalk.gd" id="5_i1400"]
+[ext_resource type="Script" path="res://Player/Scripts/StateAttack.gd" id="6_stogy"]
 [ext_resource type="AudioStream" uid="uid://dnu3jbht3dajw" path="res://_DownloadedAssets/SwordSwoosh.wav" id="8_umib7"]
-[ext_resource type="PackedScene" uid="uid://du1gjr20r7681" path="res://GeneralNodes/HurtBox/hurt_box.tscn" id="10_kq57w"]
-[ext_resource type="Script" path="res://Player/Scripts/player_interactions_host.gd" id="10_qtc3n"]
+[ext_resource type="PackedScene" uid="uid://du1gjr20r7681" path="res://GeneralNodes/HurtBox/HurtBox.tscn" id="10_kq57w"]
+[ext_resource type="Script" path="res://Player/Scripts/PlayerInteractionsHost.gd" id="10_qtc3n"]
+[ext_resource type="Script" path="res://Player/Scripts/PlayerCamera.gd" id="11_k8hc3"]
 
 [sub_resource type="Animation" id="Animation_bqyx8"]
 length = 0.001
@@ -244,8 +245,8 @@ _data = {
 "no_attack": SubResource("Animation_ks280")
 }
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_focsj"]
-radius = 18.0
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_scrvf"]
+radius = 6.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_fniij"]
 
@@ -513,7 +514,7 @@ collision_mask = 256
 monitoring = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/AttackHurtBox"]
-shape = SubResource("CircleShape2D_focsj")
+shape = SubResource("CapsuleShape2D_scrvf")
 debug_color = Color(0.997828, 0, 0.157054, 0.42)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -540,6 +541,7 @@ attack_sound = ExtResource("8_umib7")
 decelerate_speed = 17.5
 
 [node name="Camera2D" type="Camera2D" parent="."]
+script = ExtResource("11_k8hc3")
 
 [node name="Sounds" type="Node2D" parent="."]
 
