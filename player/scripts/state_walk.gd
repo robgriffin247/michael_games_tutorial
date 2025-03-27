@@ -5,6 +5,9 @@ class_name StateWalk extends State
 @onready var attack: State = $"../Attack"
 
 
+func init() -> void:
+	pass
+	
 # What happens when player enters/exits this state
 func enter() -> void:
 	player.update_animation("walk")

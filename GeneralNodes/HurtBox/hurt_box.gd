@@ -7,5 +7,5 @@ func _ready() -> void:
 
 func a_entered(a) -> void:
 	if a is HitBox:
-		a.take_damage( damage )
+		a.take_damage( self )
 	

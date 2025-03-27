@@ -8,7 +8,7 @@ var attacking: bool = false
 @onready var idle: StateIdle = $"../Idle"
 @onready var walk: StateWalk = $"../Walk"
 
-@onready var animation_player: AnimationPlayer = $"../../AnimationPlayer"
+@onready var animation_player: AnimationPlayer = $"../../SpriteAnimationPlayer"
 @onready var attack_effect_animation_player: AnimationPlayer = $"../../Sprite2D/AttackEffectSprite/AttackEffectAnimationPlayer"
 
 @onready var audio: AudioStreamPlayer2D = $"../../Sounds/AudioStreamPlayer2D"
@@ -16,6 +16,9 @@ var attacking: bool = false
 
 
 
+func init() -> void:
+	pass
+	
 # What happens when player enters/exits this state
 func enter() -> void:
 	player.update_animation("attack")
