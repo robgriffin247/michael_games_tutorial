@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://3j3wgmu2iy18"]
 
-[ext_resource type="Texture2D" uid="uid://56hbp88y5mkb" path="res://MAPS/Sprites/Grass-01.png" id="1_7iqs7"]
-[ext_resource type="Script" path="res://MAPS/Scripts/level_tilemap.gd" id="2_ldq05"]
+[ext_resource type="Texture2D" uid="uid://56hbp88y5mkb" path="res://Tilemaps/Sprites/Grass-01.png" id="1_7iqs7"]
+[ext_resource type="Script" path="res://Tilemaps/Scripts/level_tilemap.gd" id="2_ldq05"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_stykl"]
 texture = ExtResource("1_7iqs7")

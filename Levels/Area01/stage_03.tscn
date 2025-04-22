@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=4 uid="uid://bqxemlxbhdedf"]
 
 [ext_resource type="Script" path="res://Levels/level.gd" id="1_b1gns"]
-[ext_resource type="PackedScene" uid="uid://3j3wgmu2iy18" path="res://MAPS/Scenes/grass_01.tscn" id="2_cb1wy"]
+[ext_resource type="PackedScene" uid="uid://3j3wgmu2iy18" path="res://Tilemaps/Scenes/grass_01.tscn" id="2_cb1wy"]
 [ext_resource type="PackedScene" uid="uid://dmojt0mebwap8" path="res://Levels/player_spawn.tscn" id="5_480sh"]
 
 [node name="Stage02" type="Node2D"]
