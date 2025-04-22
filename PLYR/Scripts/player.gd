@@ -35,7 +35,6 @@ func _process(_delta: float) -> void:
 		Input.get_axis("up", "down")
 	).normalized() 
 
-
 func _physics_process(_delta: float) -> void:
 	
 	move_and_slide()
