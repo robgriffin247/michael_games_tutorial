@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=4 format=3 uid="uid://c45g3xpufmfvt"]
+
+[ext_resource type="Script" path="res://Items/Scripts/resource_item_data.gd" id="1_q0gcl"]
+[ext_resource type="Texture2D" uid="uid://bfhisqa5btu5x" path="res://Items/Sprites/items.png" id="2_x67cc"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fuk4u"]
+atlas = ExtResource("2_x67cc")
+region = Rect2(0, 0, 32, 32)
+
+[resource]
+script = ExtResource("1_q0gcl")
+name = "Gem"
+description = "A valuable gem"
+texture = SubResource("AtlasTexture_fuk4u")
