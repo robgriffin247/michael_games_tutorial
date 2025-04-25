@@ -1,6 +1,7 @@
-[gd_resource type="Resource" script_class="ItemData" load_steps=4 format=3 uid="uid://ix003uevfb7p"]
+[gd_resource type="Resource" script_class="ItemData" load_steps=5 format=3 uid="uid://ix003uevfb7p"]
 
-[ext_resource type="Script" path="res://Items/Scripts/resource_item_data.gd" id="1_kk8s2"]
+[ext_resource type="Script" path="res://Items/ItemEffects/item_effect.gd" id="1_2vu6t"]
+[ext_resource type="Script" path="res://Items/Scripts/item_data.gd" id="2_1donj"]
 [ext_resource type="Texture2D" uid="uid://bfhisqa5btu5x" path="res://Items/Sprites/items.png" id="2_778gn"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_pwe0x"]
@@ -8,7 +9,8 @@ atlas = ExtResource("2_778gn")
 region = Rect2(64, 0, 32, 32)
 
 [resource]
-script = ExtResource("1_kk8s2")
+script = ExtResource("2_1donj")
 name = "Stone"
 description = "Geology rocks..."
 texture = SubResource("AtlasTexture_pwe0x")
+effects = Array[ExtResource("1_2vu6t")]([])
