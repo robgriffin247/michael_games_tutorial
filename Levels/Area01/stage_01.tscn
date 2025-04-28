@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=4 uid="uid://63u8y0so2fax"]
+[gd_scene load_steps=11 format=4 uid="uid://63u8y0so2fax"]
 
 [ext_resource type="PackedScene" uid="uid://3j3wgmu2iy18" path="res://Tilemaps/Scenes/grass_01.tscn" id="1_1orq3"]
 [ext_resource type="Script" path="res://Levels/level.gd" id="1_5eygs"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://0qthiyb8y0g4" path="res://Levels/LevelTransition/level_transition.tscn" id="6_telc6"]
 [ext_resource type="PackedScene" uid="uid://cxdlmo3slyrkj" path="res://Items/ItemPickup/item_pickup.tscn" id="7_1dlyv"]
 [ext_resource type="Resource" uid="uid://ckaifg3mfppoo" path="res://Items/potion.tres" id="9_mwpkg"]
+[ext_resource type="Resource" uid="uid://ix003uevfb7p" path="res://Items/stone.tres" id="10_b0lwu"]
 [ext_resource type="Resource" uid="uid://c13gj0pqjqbje" path="res://Items/apple.tres" id="11_nkkcg"]
 
 [node name="Stage01" type="Node2D"]
@@ -19,27 +20,39 @@ tile_map_data = PackedByteArray("AAD8//z/AQAAAAIAAAD8//3/AQAAAAMAAAD9//z/AQABAAI
 [node name="PlayerSpawn" parent="." instance=ExtResource("4_2rc5g")]
 position = Vector2(80, 88)
 
-[node name="Potions" type="Node" parent="."]
+[node name="Items" type="Node" parent="."]
 
-[node name="ItemPickup" parent="Potions" instance=ExtResource("7_1dlyv")]
+[node name="Stones" type="Node" parent="Items"]
+
+[node name="ItemPickup" parent="Items/Stones" instance=ExtResource("7_1dlyv")]
+position = Vector2(144, -8)
+item_data = ExtResource("10_b0lwu")
+
+[node name="ItemPickup2" parent="Items/Stones" instance=ExtResource("7_1dlyv")]
+position = Vector2(96, -24)
+item_data = ExtResource("10_b0lwu")
+
+[node name="Potions" type="Node" parent="Items"]
+
+[node name="ItemPickup" parent="Items/Potions" instance=ExtResource("7_1dlyv")]
 position = Vector2(208, 136)
 item_data = ExtResource("9_mwpkg")
 
-[node name="ItemPickup2" parent="Potions" instance=ExtResource("7_1dlyv")]
+[node name="ItemPickup2" parent="Items/Potions" instance=ExtResource("7_1dlyv")]
 position = Vector2(560, 296)
 item_data = ExtResource("9_mwpkg")
 
-[node name="Apples" type="Node" parent="."]
+[node name="Apples" type="Node" parent="Items"]
 
-[node name="ItemPickup" parent="Apples" instance=ExtResource("7_1dlyv")]
+[node name="ItemPickup" parent="Items/Apples" instance=ExtResource("7_1dlyv")]
 position = Vector2(-24, 160)
 item_data = ExtResource("11_nkkcg")
 
-[node name="ItemPickup2" parent="Apples" instance=ExtResource("7_1dlyv")]
+[node name="ItemPickup2" parent="Items/Apples" instance=ExtResource("7_1dlyv")]
 position = Vector2(-40, 144)
 item_data = ExtResource("11_nkkcg")
 
-[node name="ItemPickup3" parent="Apples" instance=ExtResource("7_1dlyv")]
+[node name="ItemPickup3" parent="Items/Apples" instance=ExtResource("7_1dlyv")]
 position = Vector2(-48, 168)
 item_data = ExtResource("11_nkkcg")
 
