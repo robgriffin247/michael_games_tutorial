@@ -57,8 +57,9 @@ func _on_load_pressed() -> void:
 	SaveManager.load_game()
 	await LevelManager.level_load_started
 	
-	hide_pause_menu()
-
+	hide_pause_menu()	
+	
+	
 func update_item_description(new_description: String) -> void:
 	item_description.text = new_description
 

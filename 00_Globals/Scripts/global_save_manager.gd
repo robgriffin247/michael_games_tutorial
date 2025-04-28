@@ -9,8 +9,8 @@ signal game_saved
 var current_save: Dictionary = {
 	scene_path = "",
 	player = {
-		hp = 1,
-		max_hp = 1,
+		hp = 6,
+		max_hp = 6,
 		pos_x = 0,
 		pos_y = 0
 	},
@@ -56,6 +56,7 @@ func load_game():
 	await LevelManager.level_loaded
 	
 	game_loaded.emit()
+
 
 
 func update_player_data() -> void:

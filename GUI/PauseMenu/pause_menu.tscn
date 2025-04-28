@@ -79,28 +79,33 @@ layout_mode = 2
 
 [node name="SaveLoadBox" type="HBoxContainer" parent="Control"]
 layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -216.0
-offset_top = 89.0
-offset_right = -16.0
-offset_bottom = 123.0
-grow_horizontal = 2
-grow_vertical = 2
-alignment = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -304.0
+offset_top = -46.0
+offset_right = -13.0
+offset_bottom = -12.0
+grow_horizontal = 0
+grow_vertical = 0
 
 [node name="Button_Save" type="Button" parent="Control/SaveLoadBox"]
 custom_minimum_size = Vector2(75, 0)
 layout_mode = 2
-text = "SAVE"
+text = "Save Game"
 
 [node name="Button_Load" type="Button" parent="Control/SaveLoadBox"]
 custom_minimum_size = Vector2(75, 0)
 layout_mode = 2
-text = "LOAD"
+text = "Load Game
+"
+
+[node name="Button_New" type="Button" parent="Control/SaveLoadBox"]
+custom_minimum_size = Vector2(75, 0)
+layout_mode = 2
+text = "New Game"
 
 [node name="ItemDescription" type="Label" parent="Control"]
 layout_mode = 0

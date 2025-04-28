@@ -1,4 +1,4 @@
-[gd_scene load_steps=33 format=3 uid="uid://dp1xnlxe13vcr"]
+[gd_scene load_steps=38 format=3 uid="uid://dp1xnlxe13vcr"]
 
 [ext_resource type="Texture2D" uid="uid://cjupkawreyr1h" path="res://Enemies/Slime/Slime.png" id="1_fo6iy"]
 [ext_resource type="Script" path="res://Enemies/Scripts/enemy.gd" id="1_khvv3"]
@@ -13,6 +13,9 @@
 [ext_resource type="PackedScene" uid="uid://c64qyifapks48" path="res://GeneralNodes/HitBox/hit_box.tscn" id="10_21ayn"]
 [ext_resource type="Texture2D" uid="uid://1jc1i4vatxm8" path="res://Enemies/Slime/DestroySmoke.png" id="10_hg6qc"]
 [ext_resource type="Script" path="res://Enemies/Scripts/States/enemy_state_destroy.gd" id="10_vsbkh"]
+[ext_resource type="Script" path="res://Enemies/Scripts/drop_data.gd" id="11_xh2e1"]
+[ext_resource type="Resource" uid="uid://c45g3xpufmfvt" path="res://Items/gem.tres" id="12_tc4mi"]
+[ext_resource type="Resource" uid="uid://c13gj0pqjqbje" path="res://Items/apple.tres" id="13_w7kc3"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_v60eh"]
 radius = 5.0
@@ -704,6 +707,20 @@ _data = {
 "walk_up": SubResource("Animation_5sfd7")
 }
 
+[sub_resource type="Resource" id="Resource_sa6wy"]
+script = ExtResource("11_xh2e1")
+item = ExtResource("12_tc4mi")
+probability = 100.0
+min_amount = 1
+max_amount = 4
+
+[sub_resource type="Resource" id="Resource_uyjdk"]
+script = ExtResource("11_xh2e1")
+item = ExtResource("13_w7kc3")
+probability = 33.0
+min_amount = 1
+max_amount = 1
+
 [sub_resource type="CircleShape2D" id="CircleShape2D_ksh0w"]
 radius = 12.0416
 
@@ -810,6 +827,7 @@ next_state = NodePath("../Idle")
 
 [node name="Destroy" type="Node" parent="EnemyStateMachine"]
 script = ExtResource("10_vsbkh")
+drops = Array[ExtResource("11_xh2e1")]([SubResource("Resource_sa6wy"), SubResource("Resource_uyjdk")])
 
 [node name="HitBox" parent="." instance=ExtResource("10_21ayn")]
 

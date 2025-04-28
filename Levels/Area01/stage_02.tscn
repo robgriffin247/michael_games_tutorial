@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=4 uid="uid://c67x001te68uh"]
+[gd_scene load_steps=6 format=4 uid="uid://c67x001te68uh"]
 
 [ext_resource type="PackedScene" uid="uid://3j3wgmu2iy18" path="res://Tilemaps/Scenes/grass_01.tscn" id="1_05d2n"]
 [ext_resource type="Script" path="res://Levels/level.gd" id="1_i6w67"]
 [ext_resource type="PackedScene" uid="uid://dmojt0mebwap8" path="res://Levels/player_spawn.tscn" id="4_32e4j"]
 [ext_resource type="PackedScene" uid="uid://0qthiyb8y0g4" path="res://Levels/LevelTransition/level_transition.tscn" id="4_yis8s"]
+[ext_resource type="PackedScene" uid="uid://dp1xnlxe13vcr" path="res://Enemies/Slime/slime.tscn" id="5_r26gx"]
 
 [node name="Stage02" type="Node2D"]
 script = ExtResource("1_i6w67")
@@ -17,3 +18,21 @@ position = Vector2(336, 243)
 [node name="LevelTransition" parent="." instance=ExtResource("4_yis8s")]
 position = Vector2(-16, 240)
 level = "res://Levels/Area01/stage_01.tscn"
+
+[node name="Slime" parent="." instance=ExtResource("5_r26gx")]
+position = Vector2(264, 101)
+
+[node name="Slime2" parent="." instance=ExtResource("5_r26gx")]
+position = Vector2(116, 131)
+
+[node name="Slime3" parent="." instance=ExtResource("5_r26gx")]
+position = Vector2(306, 375)
+
+[node name="Slime4" parent="." instance=ExtResource("5_r26gx")]
+position = Vector2(90, 385)
+
+[node name="Slime5" parent="." instance=ExtResource("5_r26gx")]
+position = Vector2(492, 271)
+
+[node name="Slime6" parent="." instance=ExtResource("5_r26gx")]
+position = Vector2(455, 119)
