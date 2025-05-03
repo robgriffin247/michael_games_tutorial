@@ -1,8 +1,4 @@
-[gd_scene load_steps=2 format=3 uid="uid://d2vavrk57jsas"]
-
-[ext_resource type="PackedScene" uid="uid://63u8y0so2fax" path="res://Levels/Area01/stage_01.tscn" id="2_o1gyd"]
+[gd_scene format=3 uid="uid://d2vavrk57jsas"]
 
 [node name="Playground" type="Node2D"]
 y_sort_enabled = true
-
-[node name="Stage01" parent="." instance=ExtResource("2_o1gyd")]

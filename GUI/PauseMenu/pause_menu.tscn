@@ -102,11 +102,6 @@ layout_mode = 2
 text = "Load Game
 "
 
-[node name="Button_New" type="Button" parent="Control/SaveLoadBox"]
-custom_minimum_size = Vector2(75, 0)
-layout_mode = 2
-text = "New Game"
-
 [node name="ItemDescription" type="Label" parent="Control"]
 layout_mode = 0
 offset_left = 40.0

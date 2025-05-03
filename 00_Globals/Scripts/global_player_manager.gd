@@ -7,6 +7,7 @@ const INVENTORY_DATA = preload("res://GUI/PauseMenu/Inventory/player_inventory.t
 var player: Player
 var player_spawned = false
 
+signal interact_pressed
 
 func _ready() -> void:
 	add_player_instance()

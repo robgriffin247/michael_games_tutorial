@@ -1,4 +1,4 @@
-[gd_scene load_steps=43 format=3 uid="uid://b61fsyov1dmnu"]
+[gd_scene load_steps=44 format=3 uid="uid://b61fsyov1dmnu"]
 
 [ext_resource type="Script" path="res://Player/Scripts/player.gd" id="1_c34kv"]
 [ext_resource type="Texture2D" uid="uid://bemcgj3aba7c0" path="res://Player/Sprites/PlayerSprite02.png" id="2_ri25b"]
@@ -532,6 +532,9 @@ _data = {
 "walk_up": SubResource("Animation_mlfuc")
 }
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_imhtj"]
+size = Vector2(32, 32)
+
 [sub_resource type="CircleShape2D" id="CircleShape2D_dbraw"]
 
 [sub_resource type="Animation" id="Animation_l5o65"]
@@ -602,6 +605,7 @@ _data = {
 }
 
 [node name="Player" type="CharacterBody2D"]
+y_sort_enabled = true
 collision_mask = 16
 motion_mode = 1
 wall_min_slide_angle = 0.174533
@@ -680,6 +684,17 @@ bus = &"SFX"
 
 [node name="Interactions" type="Node2D" parent="."]
 script = ExtResource("10_qtc3n")
+
+[node name="Area2D" type="Area2D" parent="Interactions"]
+position = Vector2(0, -8)
+collision_layer = 4
+collision_mask = 0
+monitoring = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Interactions/Area2D"]
+position = Vector2(0, 16)
+shape = SubResource("RectangleShape2D_imhtj")
+debug_color = Color(0.165966, 0.628073, 0.414801, 0.42)
 
 [node name="HitBox" parent="." instance=ExtResource("13_c2u8r")]
 position = Vector2(0, -8)
