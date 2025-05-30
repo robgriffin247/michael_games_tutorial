@@ -29,7 +29,6 @@ func _physics_process(_delta: float) -> void:
 
 
 func set_direction(_new_direction: Vector2) -> bool:
-	#var new_direction: Vector2 = cardinal_direction
 	if direction == Vector2.ZERO: # don't need to try to change direction if no directional input
 		return false
 

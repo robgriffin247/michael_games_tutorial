@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=4 uid="uid://b54cbmbjewj3k"]
+[gd_scene load_steps=11 format=4 uid="uid://b54cbmbjewj3k"]
 
 [ext_resource type="PackedScene" uid="uid://3j3wgmu2iy18" path="res://Tilemaps/Scenes/grass_01.tscn" id="1_1orq3"]
 [ext_resource type="Script" path="res://Levels/level.gd" id="1_5eygs"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://ccr3bt1oxajlm" path="res://Props/Plants/plant.tscn" id="3_b3ncb"]
 [ext_resource type="PackedScene" uid="uid://dmojt0mebwap8" path="res://Levels/player_spawn.tscn" id="4_2rc5g"]
 [ext_resource type="PackedScene" uid="uid://0qthiyb8y0g4" path="res://Levels/LevelTransition/level_transition.tscn" id="6_telc6"]
+[ext_resource type="PackedScene" uid="uid://dbflvjkxxfbg1" path="res://Enemies/Goblin/goblin.tscn" id="6_xfvt5"]
 [ext_resource type="Resource" uid="uid://c13gj0pqjqbje" path="res://Items/apple.tres" id="11_nkkcg"]
 [ext_resource type="PackedScene" uid="uid://v1b7ai5dcdac" path="res://Interactables/TreasureChest/treasure_chest.tscn" id="11_ttwjm"]
 
@@ -44,3 +45,6 @@ quantity = 5
 
 [node name="Slime" parent="." instance=ExtResource("2_5xo40")]
 position = Vector2(208, 256)
+
+[node name="Goblin" parent="." instance=ExtResource("6_xfvt5")]
+position = Vector2(560, 48)
